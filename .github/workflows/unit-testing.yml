@@ -1,0 +1,10 @@
+name: Unit Testing
+run-name: ${{ github.actor }} is testing Implemented Functions
+on: [push]
+jobs:
+  Unit-Testing:
+    runs-on: ubuntu-latest
+    steps:
+      - run: make all
+      - run: ./test
+      - run: make clean
